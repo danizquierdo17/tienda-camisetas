@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Camisetas de Fútbol</title>
+    <link rel="stylesheet" href="tienda.css">
+    <script src="productos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>⚽ Tienda de Camisetas</h1>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 Carrito (<span id="cart-count">0</span>)
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Filtros -->
+        <section class="filters">
+            <div class="filter-group">
+                <label for="team-filter">Filtrar por equipo:</label>
+                <select id="team-filter" onchange="filterProducts()">
+                    <option value="">Todos los equipos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="filterProducts()">
+            </div>
+        </section>
+
+        <!-- Grid de productos -->
+        <section id="products-grid" class="products-grid">
+            <!-- Los productos se cargarán dinámicamente -->
+        </section>
+    </main>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tu Carrito</h2>
+                <span class="close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Items del carrito se cargarán aquí -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: <span id="cart-total">0.00</span>€</strong>
+                </div>
+                <button class="btn-checkout" onclick="checkout()">Proceder al Pago</button>
+                <button class="btn-clear" onclick="clearCart()">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de producto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-name"></h2>
+                <span class="close" onclick="closeProductModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="product-details">
+                    <img id="modal-product-image" src="" alt="">
+                    <div class="product-info">
+                        <p class="product-price">Precio: <span id="modal-product-price"></span>€</p>
+                        <p class="product-team">Equipo: <span id="modal-product-team"></span></p>
+                        
+                        <form id="add-to-cart-form" onsubmit="addToCart(event)">
+                            <div class="form-group">
+                                <label for="size">Talla:</label>
+                                <select id="size" required>
+                                    <option value="">Selecciona una talla</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                    <option value="XXXL">XXXL</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name">Nombre (opcional):</label>
+                                <input type="text" id="name" maxlength="20" placeholder="Ej: MESSI">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="number">Dorsal (opcional):</label>
+                                <input type="number" id="number" min="0" max="99" placeholder="Ej: 10">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="patch">Parche:</label>
+                                <select id="patch">
+                                    <option value="">Sin parche</option>
+                                    <option value="2026 Mundial">2026 Mundial</option>
+                                    <option value="FairPlay">FairPlay</option>
+                                    <option value="2026 Mundial+FairPlay">2026 Mundial + FairPlay</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn-add-cart">Añadir al Carrito</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Finalizar Pedido</h2>
+                <span class="close" onclick="closeCheckout()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form" onsubmit="submitOrder(event)">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre completo: *</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-email">Email: *</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-phone">Teléfono: *</label>
+                        <input type="tel" id="customer-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-address">Dirección de envío: *</label>
+                        <textarea id="customer-address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-city">Ciudad: *</label>
+                        <input type="text" id="customer-city" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-postal">Código Postal: *</label>
+                        <input type="text" id="customer-postal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-notes">Notas adicionales (opcional):</label>
+                        <textarea id="customer-notes" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="checkout-summary">
+                        <h3>Resumen del Pedido</h3>
+                        <div id="checkout-items"></div>
+                        <div class="checkout-total">
+                            <strong>Total: <span id="checkout-total">0.00</span>€</strong>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit-order">Confirmar Pedido</button>
+                    <button type="button" class="btn-cancel" onclick="closeCheckout()">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="tienda.js"></script>
+</body>
+</html>

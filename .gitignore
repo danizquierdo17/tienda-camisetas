@@ -1,0 +1,50 @@
+# Entorno virtual Python
+venv/
+env/
+ENV/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Imágenes (se suben por separado vía FTP/SCP)
+images/
+futbolmodaes_img/
+
+# Archivos de datos generados
+productos.js
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+*.tar.gz
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+temp/
+tmp/
+
+# Archivos de configuración local
+.env
+config.local.py
+
+# Archivos de prueba
+test_*.py
+*_test.py
+
+# Made with Bob
