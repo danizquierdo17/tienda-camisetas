@@ -2,6 +2,7 @@
 venv/
 env/
 ENV/
+Tienda/
 
 # Cache de Python
 __pycache__/
@@ -11,6 +12,7 @@ __pycache__/
 
 # Imágenes (se suben por separado vía FTP/SCP)
 images/
+España/
 futbolmodaes_img/
 
 # Archivos de datos generados
