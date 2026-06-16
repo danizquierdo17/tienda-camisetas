@@ -21,12 +21,19 @@
         <!-- Filtros -->
         <section class="filters">
             <div class="filter-group">
-                <label for="team-filter">Filtrar por equipo:</label>
+                <label for="type-filter">Tipo de ropa:</label>
+                <select id="type-filter" onchange="filterProducts()">
+                    <option value="">Todos los tipos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="team-filter">Equipo:</label>
                 <select id="team-filter" onchange="filterProducts()">
                     <option value="">Todos los equipos</option>
                 </select>
             </div>
             <div class="filter-group">
+                <label for="search-input">Buscar:</label>
                 <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="filterProducts()">
             </div>
         </section>
@@ -80,18 +87,18 @@
                                     <option value="M">M</option>
                                     <option value="L">L</option>
                                     <option value="XL">XL</option>
-                                    <option value="XXL">XXL</option>
-                                    <option value="XXXL">XXXL</option>
+                                    <option value="XXL">XXL(+1,50€)</option>
+                                    <option value="XXXL">XXXL(+1,50€)</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="name">Nombre (opcional):</label>
+                                <label for="name">Nombre y dorsal (opcional + 2,50€):</label>
                                 <input type="text" id="name" maxlength="20" placeholder="Ej: MESSI">
                             </div>
                             
                             <div class="form-group">
-                                <label for="number">Dorsal (opcional):</label>
+                                
                                 <input type="number" id="number" min="0" max="99" placeholder="Ej: 10">
                             </div>
                             
@@ -99,9 +106,9 @@
                                 <label for="patch">Parche:</label>
                                 <select id="patch">
                                     <option value="">Sin parche</option>
-                                    <option value="2026 Mundial">2026 Mundial</option>
-                                    <option value="FairPlay">FairPlay</option>
-                                    <option value="2026 Mundial+FairPlay">2026 Mundial + FairPlay</option>
+                                    <option value="2026 Mundial">2026 Mundial (1,50€)</option>
+                                    <option value="FairPlay">FairPlay(1,50€)</option>
+                                    <option value="2026 Mundial+FairPlay">2026 Mundial + FairPlay (2,50€)</option>
                                 </select>
                             </div>
                             

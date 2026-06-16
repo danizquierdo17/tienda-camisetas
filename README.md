@@ -1,211 +1,196 @@
 # 🛍️ Tienda de Camisetas de Fútbol
 
-Tienda online completa con catálogo de 2,452 camisetas, carrito de compras, personalización y envío automático de emails.
+Aplicación web para venta de camisetas de fútbol con carrito de compras y sistema de pedidos por email.
+
+## 📋 Archivos Esenciales
+
+### Archivos de la Aplicación Web
+```
+tienda.html          # Página principal de la tienda
+tienda.css           # Estilos de la aplicación
+tienda.js            # Lógica del frontend
+productos.js         # Catálogo de productos (generado automáticamente)
+```
+
+### Backend y Servidor
+```
+server.py            # Servidor Flask para envío de emails
+requirements.txt     # Dependencias Python
+```
+
+### Scripts de Utilidad
+```
+iniciar_tienda.sh    # Script para iniciar la aplicación completa
+```
+
+### Imágenes
+```
+futbolmodaes_img/    # Directorio con imágenes de productos
+  ├── placeholder.svg    # Imagen por defecto
+  └── [equipos]/         # Subdirectorios por equipo
+```
 
 ## 🚀 Inicio Rápido
 
-### Opción 1: Script Automático (Recomendado)
+### 1. Configurar el Entorno
+
 ```bash
+# Crear entorno virtual Python
+python3 -m venv venv
+
+# Activar entorno virtual
+source venv/bin/activate  # En macOS/Linux
+# o
+venv\Scripts\activate     # En Windows
+
+# Instalar dependencias
+pip install -r requirements.txt
+```
+
+### 2. Iniciar la Aplicación
+
+**Opción A: Script Automático (Recomendado)**
+```bash
+chmod +x iniciar_tienda.sh
 ./iniciar_tienda.sh
 ```
 
-Luego abre en tu navegador: **http://localhost:8000/tienda.html**
-
-### Opción 2: Manual
-
-1. **Iniciar servidor de emails:**
+**Opción B: Manual**
 ```bash
+# Terminal 1: Iniciar servidor Flask (emails)
 source venv/bin/activate
 python3 server.py
-```
 
-2. **En otra terminal, iniciar servidor web:**
-```bash
+# Terminal 2: Iniciar servidor web
 python3 -m http.server 8000
 ```
 
-3. **Abrir en navegador:**
-```
-http://localhost:8000/tienda.html
-```
+### 3. Acceder a la Tienda
 
-## 📋 Características
+Abre tu navegador en: **http://localhost:8001/tienda.html**
 
-### Catálogo
-- 2,452 productos de 68 equipos diferentes
-- Imágenes reales de cada producto
-- Sistema de precios dual (precio lista + precio venta)
-- Filtro por equipo
-- Buscador de productos
-
-### Personalización
-- **Tallas:** S, M, L, XL, XXL, XXXL
-- **Nombre personalizado:** Hasta 20 caracteres
-- **Dorsal:** Números del 0 al 99
-- **Parches:** 
-  - Sin parche
-  - 2026 Mundial
-  - FairPlay
-  - 2026 Mundial + FairPlay
-
-### Carrito de Compras
-- Agregar/eliminar productos
-- Persistencia en localStorage
-- Cálculo automático de totales
-- Vista detallada de cada producto
-
-### Sistema de Emails
-- Email automático al administrador (d8t.dev@gmail.com) con detalles del pedido
-- Email de confirmación al cliente
-- Emails en formato HTML profesional
-- Usa SMTP de Gmail directamente
-
-## 📁 Estructura de Archivos
-
-```
-├── tienda.html                  # Página principal de la tienda
-├── tienda.css                   # Estilos
-├── tienda.js                    # Lógica del carrito y checkout
-├── productos.js                 # Catálogo de 2,452 productos
-├── server.py                    # Backend Flask para envío de emails
-├── combinar_datos.py            # Script para generar productos con precios
-├── reorganizar_imagenes.py      # Script para reorganizar imágenes (seguridad)
-├── actualizar_rutas_imagenes.py # Script para actualizar rutas en productos.js
-├── iniciar_tienda.sh            # Script para iniciar todo automáticamente
-├── requirements.txt             # Dependencias Python
-├── venv/                        # Entorno virtual Python
-├── images/                      # 🔒 Imágenes públicas (solo IDs como nombres)
-│   ├── 30022.jpg
-│   ├── 29861.jpg
-│   └── ...
-└── futbolmodaes_img/            # Imágenes originales (solo desarrollo)
-    ├── manifest.csv             # IDs y rutas de imágenes
-    ├── catalogo.csv             # Nombres y precios
-    └── [equipos]/               # Subdirectorios por equipo
-```
-
-### 🔒 Seguridad de Imágenes
-
-Las imágenes ahora se sirven desde el directorio `images/` con nombres simples (solo ID) en lugar de exponer la estructura de equipos. Esto mejora la seguridad al no revelar la organización interna del servidor.
-
-**Ver:** [`SEGURIDAD_IMAGENES.md`](SEGURIDAD_IMAGENES.md) para más detalles.
-
-## 💰 Sistema de Precios
-
-Cada producto tiene dos precios:
-- **precio_lista:** Precio original del proveedor
-- **precio_venta:** Precio mostrado al cliente (calculado con fórmula)
-
-### Fórmula Actual
-```
-Precio Venta = Precio Lista × 2 (100% de margen)
-```
-
-### Cambiar la Fórmula
-Edita la función `calcular_precio_venta()` en [`combinar_datos.py`](combinar_datos.py:13) y ejecuta:
-```bash
-python3 combinar_datos.py
-```
-
-Ver [`SISTEMA_PRECIOS.md`](SISTEMA_PRECIOS.md) para más opciones de fórmulas.
+**Nota:** Si los puertos 5001 u 8001 están ocupados, puedes cambiarlos manualmente en [`iniciar_tienda.sh`](iniciar_tienda.sh:1) y [`tienda.js`](tienda.js:465)
 
 ## 📧 Configuración de Emails
 
-El sistema usa SMTP de Gmail con las credenciales ya configuradas en [`server.py`](server.py:1):
+El archivo [`server.py`](server.py:12-15) contiene la configuración SMTP:
 
-- **Email:** d8t.dev@gmail.com
-- **Contraseña de aplicación:** zhyn ydes zmch regn
+```python
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+SMTP_EMAIL = "tu-email@gmail.com"
+SMTP_PASSWORD = "tu-contraseña-de-aplicación"
+```
 
-### Emails que se Envían
+**Nota:** Para Gmail, necesitas crear una "Contraseña de aplicación" en tu cuenta de Google.
 
-1. **Al Administrador (d8t.dev@gmail.com):**
-   - Datos completos del cliente
-   - Detalles del pedido con personalizaciones
-   - Total del pedido
-   - Fecha y hora
+## 🛠️ Estructura del Proyecto
 
-2. **Al Cliente:**
-   - Confirmación del pedido
-   - Resumen de productos
-   - Total
-   - Mensaje de que se contactará pronto
+```
+/
+├── tienda.html              # Frontend principal
+├── tienda.css               # Estilos
+├── tienda.js                # Lógica del carrito y filtros
+├── productos.js             # Catálogo de productos
+├── server.py                # Backend Flask
+├── requirements.txt         # Dependencias Python
+├── iniciar_tienda.sh        # Script de inicio
+├── .gitignore              # Archivos ignorados por Git
+└── futbolmodaes_img/       # Imágenes de productos
+    ├── placeholder.svg
+    └── [equipos]/
+```
 
-## 🛠️ Requisitos
+## 🎯 Funcionalidades
 
-- Python 3.x
-- Flask
-- flask-cors
+### Frontend
+- ✅ Catálogo de productos con imágenes
+- ✅ Filtros por tipo de producto y equipo
+- ✅ Búsqueda de productos
+- ✅ Carrito de compras con localStorage
+- ✅ Personalización (talla, nombre, dorsal, parches)
+- ✅ Cálculo automático de extras
+- ✅ Formulario de checkout
 
-Las dependencias se instalan automáticamente en el entorno virtual.
+### Backend
+- ✅ Envío de emails con detalles del pedido
+- ✅ Email de confirmación al cliente
+- ✅ Email de notificación al administrador
+- ✅ API REST con Flask
 
-## 📝 Flujo de Compra
+## 💰 Sistema de Precios
 
-1. Cliente navega por el catálogo
-2. Selecciona producto y personaliza (talla, nombre, dorsal, parche)
-3. Agrega al carrito
-4. Repite para más productos
-5. Hace clic en "Proceder al Pago"
-6. Completa formulario con sus datos
-7. Confirma pedido
-8. Sistema envía emails automáticamente:
-   - Email al administrador con todos los detalles
-   - Email de confirmación al cliente
-9. Administrador contacta al cliente para coordinar pago y envío
+Los precios se calculan automáticamente:
+- **Precio base:** Definido en [`productos.js`](productos.js:1-6)
+- **Extras:**
+  - Tallas XXL/XXXL: +1.50€
+  - Nombre y/o dorsal: +2.50€
+  - Parche simple: +1.50€
+  - Parche doble: +2.50€
 
 ## 🔧 Mantenimiento
 
-### Actualizar Catálogo
-Si cambias los precios en `catalogo.csv`:
+### Actualizar Catálogo de Productos
+
+El archivo [`productos.js`](productos.js:1-6) contiene el catálogo. Para actualizarlo:
+
+1. Edita el archivo directamente, o
+2. Usa scripts de scraping (si están disponibles)
+
+### Añadir Nuevas Imágenes
+
+1. Coloca las imágenes en `futbolmodaes_img/[equipo]/`
+2. Actualiza las rutas en [`productos.js`](productos.js:1-6)
+3. Usa [`placeholder.svg`](futbolmodaes_img/placeholder.svg) como fallback
+
+## 🌐 Despliegue en Producción
+
+### Opción 1: Servidor Simple
 ```bash
-python3 combinar_datos.py
+# Usar un servidor web como Nginx o Apache
+# Servir archivos estáticos desde el directorio raíz
 ```
 
-### Ver Logs del Servidor
-Los logs aparecen en la terminal donde ejecutaste `server.py`
+### Opción 2: Hosting Estático
+- GitHub Pages
+- Netlify
+- Vercel
 
-### Detener Servidores
-Presiona `Ctrl+C` en las terminales donde están corriendo
+**Nota:** El backend Flask necesita un servidor separado para el envío de emails.
 
-## 📚 Documentación Adicional
+## 📝 Notas Importantes
 
-- [`SISTEMA_PRECIOS.md`](SISTEMA_PRECIOS.md) - Cómo funcionan y cambiar los precios
-- [`CONFIGURACION_EMAIL.md`](CONFIGURACION_EMAIL.md) - Configuración de EmailJS (alternativa)
-- [`SEGURIDAD_IMAGENES.md`](SEGURIDAD_IMAGENES.md) - Estructura segura de imágenes
-- [`DESPLIEGUE_SHOP_D8T_DEV.md`](DESPLIEGUE_SHOP_D8T_DEV.md) - Guía completa para desplegar en shop.d8t.dev
-- [`ACTUALIZAR_CATALOGO.md`](ACTUALIZAR_CATALOGO.md) - Cómo actualizar el catálogo de productos
+1. **Entorno Virtual:** Siempre activa el entorno virtual antes de ejecutar scripts Python
+2. **Puerto 5001:** El servidor Flask usa el puerto 5001 (configurable en [`server.py`](server.py:189))
+3. **Puerto 8001:** El servidor web usa el puerto 8001 (configurable en [`iniciar_tienda.sh`](iniciar_tienda.sh:1))
+4. **CORS:** Habilitado para desarrollo local
+5. **Imágenes:** Las imágenes deben estar en `futbolmodaes_img/` para que funcionen correctamente
 
 ## 🐛 Solución de Problemas
 
-### Error: "Failed to fetch" al enviar pedido
-**Causa:** El servidor Flask no está ejecutándose  
-**Solución:** Ejecuta `python3 server.py` o usa `./iniciar_tienda.sh`
+### El servidor Flask no inicia
+```bash
+# Verifica que el entorno virtual esté activo
+source venv/bin/activate
 
-### Error: "ModuleNotFoundError: No module named 'flask'"
-**Causa:** Entorno virtual no activado  
-**Solución:** Ejecuta `source venv/bin/activate`
+# Reinstala dependencias
+pip install -r requirements.txt
+```
 
-### Las imágenes no cargan
-**Causa:** Servidor web no está en el directorio correcto  
-**Solución:** Ejecuta `python3 -m http.server 8000` desde el directorio del proyecto
+### Las imágenes no se cargan
+- Verifica que existan en `futbolmodaes_img/`
+- Comprueba las rutas en [`productos.js`](productos.js:1-6)
+- El placeholder se usa automáticamente si falta la imagen
 
-### Email no se envía
-**Causa:** Credenciales SMTP incorrectas o bloqueadas  
-**Solución:** Verifica las credenciales en `server.py` líneas 13-14
+### Los emails no se envían
+- Verifica la configuración SMTP en [`server.py`](server.py:12-15)
+- Comprueba que uses una "Contraseña de aplicación" de Gmail
+- Revisa los logs del servidor Flask
 
-## 🎯 Próximas Mejoras
+## 📄 Licencia
 
-- [ ] Integración con pasarela de pago (Stripe, PayPal)
-- [ ] Panel de administración para gestionar pedidos
-- [ ] Sistema de tracking de envíos
-- [ ] Descuentos y cupones
-- [ ] Múltiples idiomas
-- [ ] Modo oscuro
-
-## 📞 Soporte
-
-Para cualquier problema o pregunta:
-- Email: d8t.dev@gmail.com
+Este proyecto es de uso privado.
 
 ---
 
-**Hecho con ❤️ por Bob**
+**Hecho con ❤️ y Bob**

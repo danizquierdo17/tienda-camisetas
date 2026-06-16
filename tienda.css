@@ -57,41 +57,50 @@ header h1 {
 /* Filtros */
 .filters {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     margin: 30px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    align-items: end;
 }
 
 .filter-group {
-    flex: 1;
-    min-width: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .filter-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 600;
     color: #333;
+    font-size: 14px;
 }
 
 .filter-group select,
 .filter-group input {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: white;
 }
 
 .filter-group select:focus,
 .filter-group input:focus {
     outline: none;
     border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-group select:hover,
+.filter-group input:hover {
+    border-color: #b8c5f2;
 }
 
 /* Grid de productos */
@@ -333,6 +342,33 @@ header h1 {
     font-weight: bold;
     color: #667eea;
     font-size: 18px;
+}
+
+.cart-item-price-breakdown {
+    margin-top: 8px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.price-base {
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.price-extras {
+    color: #ff6b6b;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.price-total {
+    color: #667eea;
+    font-size: 16px;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #dee2e6;
 }
 
 .btn-remove {

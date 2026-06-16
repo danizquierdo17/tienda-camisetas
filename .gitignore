@@ -2,29 +2,12 @@
 venv/
 env/
 ENV/
-Tienda/
 
 # Cache de Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Imágenes (se suben por separado vía FTP/SCP)
-images/
-España/
-futbolmodaes_img/
-
-# Archivos de datos generados
-productos.js
-
-# Logs
-logs/
-*.log
-
-# Backups
-backups/
-*.tar.gz
 
 # Sistema operativo
 .DS_Store
@@ -45,8 +28,42 @@ tmp/
 .env
 config.local.py
 
-# Archivos de prueba
+# Logs
+*.log
+
+# Archivos de desarrollo/testing (NO necesarios para producción)
 test_*.py
 *_test.py
+test_*.html
+scraper_*.py
+scraper_*.txt
+limpiar_catalogo.py
+combinar_datos.py
+convertir_csv_a_js.py
+reorganizar_imagenes.py
+actualizar_rutas_imagenes.py
+actualizar_catalogo_automatico.sh
+empaquetar_para_produccion.sh
+deploy_to_gcloud.sh
+
+# Documentación de desarrollo (opcional, mantener solo README.md)
+ACTUALIZAR_CATALOGO.md
+ACTUALIZACION_AUTOMATICA.md
+DESPLIEGUE_GCLOUD_D8T.md
+DESPLIEGUE_PUBLICO.md
+DESPLIEGUE_SHOP_D8T_DEV.md
+GUIA_RAPIDA.md
+SEGURIDAD_IMAGENES.md
+SISTEMA_PRECIOS.md
+
+# Backups y archivos comprimidos
+backups/
+*.tar.gz
+*.zip
+
+# Directorios de imágenes antiguas (si existen)
+images/
+España/
+Tienda/
 
 # Made with Bob

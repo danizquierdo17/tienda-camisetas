@@ -186,9 +186,11 @@ def send_customer_email(name, email, details, total, date):
         server.send_message(msg)
 
 if __name__ == '__main__':
-    print("🚀 Servidor Flask iniciado en http://localhost:5000")
+    import os
+    port = int(os.environ.get('FLASK_RUN_PORT', 5001))
+    print(f"🚀 Servidor Flask iniciado en http://localhost:{port}")
     print("📧 Configurado para enviar emails desde:", SMTP_EMAIL)
     print("\nPara detener el servidor, presiona Ctrl+C")
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=port)
 
 # Made with Bob

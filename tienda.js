@@ -9,13 +9,46 @@ document.addEventListener('DOMContentLoaded', function() {
     loadCart();
 });
 
+// Extraer tipo de producto del slug del equipo
+function getProductType(equipoSlug) {
+    // Mapeo de prefijos a tipos de productos
+    const typeMap = {
+        'chandales': 'Chandal',
+        'nacional': 'Camiseta Selección',
+        'premier-league': 'Camiseta Premier League',
+        'la-liga': 'Camiseta La Liga',
+        'serie-a': 'Camiseta Serie A',
+        'bundesliga': 'Camiseta Bundesliga',
+        'ligue-1': 'Camiseta Ligue 1',
+        'nba': 'Camiseta NBA',
+        'nfl': 'Camiseta NFL',
+        'polo': 'Polo',
+        'otro-club': 'Camiseta Club',
+        'ninos': 'Niños',
+        'retro': 'Retro'
+    };
+    
+    // Buscar el tipo basado en el prefijo del slug
+    for (const [prefix, type] of Object.entries(typeMap)) {
+        if (equipoSlug.startsWith(prefix)) {
+            return type;
+        }
+    }
+    
+    return 'Camiseta Fútbol'; // Tipo por defecto
+}
+
 // Cargar productos desde el archivo productos.js
 function loadProducts() {
     try {
         // Los productos ya vienen con la ruta de imagen correcta desde productos.js
-        allProducts = productosData;
-        displayProducts(productosData);
-        populateTeamFilter(productosData);
+        allProducts = productosData.map(p => ({
+            ...p,
+            tipo: getProductType(p.equipo)
+        }));
+        displayProducts(allProducts);
+        populateTeamFilter(allProducts);
+        populateTypeFilter(allProducts);
         
     } catch (error) {
         console.error('Error cargando productos:', error);
@@ -56,38 +89,106 @@ function formatTeamName(teamSlug) {
         .join(' ');
 }
 
+// Poblar filtro de tipos
+function populateTypeFilter(products, selectedValue = '') {
+    const types = [...new Set(products.map(p => p.tipo))].sort();
+    const select = document.getElementById('type-filter');
+    const currentValue = selectedValue || select.value;
+    
+    // Limpiar opciones excepto la primera
+    select.innerHTML = '<option value="">Todos los tipos</option>';
+    
+    types.forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        if (type === currentValue) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+}
+
 // Poblar filtro de equipos
-function populateTeamFilter(products) {
+function populateTeamFilter(products, selectedValue = '') {
     const teams = [...new Set(products.map(p => p.equipo))].sort();
     const select = document.getElementById('team-filter');
+    const currentValue = selectedValue || select.value;
+    
+    // Limpiar opciones excepto la primera
+    select.innerHTML = '<option value="">Todos los equipos</option>';
     
     teams.forEach(team => {
         const option = document.createElement('option');
         option.value = team;
         option.textContent = formatTeamName(team);
+        if (team === currentValue) {
+            option.selected = true;
+        }
         select.appendChild(option);
     });
 }
 
-// Filtrar productos
+// Filtrar productos y actualizar filtros dinámicamente
 function filterProducts() {
+    const typeFilter = document.getElementById('type-filter').value;
     const teamFilter = document.getElementById('team-filter').value;
     const searchText = document.getElementById('search-input').value.toLowerCase();
     
     let filtered = allProducts;
+    
+    // Aplicar filtros
+    if (typeFilter) {
+        filtered = filtered.filter(p => p.tipo === typeFilter);
+    }
     
     if (teamFilter) {
         filtered = filtered.filter(p => p.equipo === teamFilter);
     }
     
     if (searchText) {
-        filtered = filtered.filter(p => 
+        filtered = filtered.filter(p =>
             p.nombre.toLowerCase().includes(searchText) ||
-            p.equipo.toLowerCase().includes(searchText)
+            p.equipo.toLowerCase().includes(searchText) ||
+            p.tipo.toLowerCase().includes(searchText)
         );
     }
     
+    // Mostrar productos filtrados
     displayProducts(filtered);
+    
+    // Actualizar opciones de filtros basándose en productos disponibles
+    updateFilterOptions(typeFilter, teamFilter, searchText);
+}
+
+// Actualizar opciones de filtros dinámicamente
+function updateFilterOptions(currentType, currentTeam, searchText) {
+    let availableProducts = allProducts;
+    
+    // Si hay búsqueda de texto, filtrar primero por eso
+    if (searchText) {
+        availableProducts = availableProducts.filter(p =>
+            p.nombre.toLowerCase().includes(searchText) ||
+            p.equipo.toLowerCase().includes(searchText) ||
+            p.tipo.toLowerCase().includes(searchText)
+        );
+    }
+    
+    // Actualizar filtro de tipos basado en equipo seleccionado
+    if (currentTeam) {
+        const productsForTeam = availableProducts.filter(p => p.equipo === currentTeam);
+        populateTypeFilter(productsForTeam, currentType);
+    } else {
+        populateTypeFilter(availableProducts, currentType);
+    }
+    
+    // Actualizar filtro de equipos basado en tipo seleccionado
+    if (currentType) {
+        const productsForType = availableProducts.filter(p => p.tipo === currentType);
+        populateTeamFilter(productsForType, currentTeam);
+    } else {
+        populateTeamFilter(availableProducts, currentTeam);
+    }
 }
 
 // Abrir modal de producto
@@ -114,6 +215,30 @@ function closeProductModal() {
     currentProduct = null;
 }
 
+// Calcular costos adicionales
+function calculateExtras(size, name, number, patch) {
+    let extras = 0;
+    
+    // Talla XXL o XXXL: +1.50€
+    if (size === 'XXL' || size === 'XXXL') {
+        extras += 1.50;
+    }
+    
+    // Nombre o dorsal: +2.50€ (si se proporciona al menos uno)
+    if (name || number) {
+        extras += 2.50;
+    }
+    
+    // Parches
+    if (patch === '2026 Mundial' || patch === 'FairPlay') {
+        extras += 1.50;
+    } else if (patch === '2026 Mundial+FairPlay') {
+        extras += 2.50;
+    }
+    
+    return extras;
+}
+
 // Añadir al carrito
 function addToCart(event) {
     event.preventDefault();
@@ -130,12 +255,18 @@ function addToCart(event) {
         return;
     }
     
+    // Calcular extras
+    const extras = calculateExtras(size, name, number, patch);
+    const precioFinal = currentProduct.precio_venta + extras;
+    
     const cartItem = {
         id: Date.now(),
         productId: currentProduct.id,
         nombre: currentProduct.nombre,
         equipo: currentProduct.equipo,
-        precio: currentProduct.precio_venta,
+        precio_base: currentProduct.precio_venta,
+        extras: extras,
+        precio: precioFinal,
         precio_lista: currentProduct.precio_lista,
         imagen: currentProduct.imagen,
         talla: size,
@@ -170,7 +301,11 @@ function updateCartDisplay() {
     const total = cart.reduce((sum, item) => sum + item.precio, 0);
     cartTotal.textContent = total.toFixed(2);
     
-    cartItems.innerHTML = cart.map(item => `
+    cartItems.innerHTML = cart.map(item => {
+        const precioBase = item.precio_base || item.precio;
+        const extras = item.extras || 0;
+        
+        return `
         <div class="cart-item">
             <div class="cart-item-info">
                 <div class="cart-item-name">${item.nombre}</div>
@@ -178,11 +313,16 @@ function updateCartDisplay() {
                 ${item.nombrePersonalizado ? `<div class="cart-item-details">Nombre: ${item.nombrePersonalizado}</div>` : ''}
                 ${item.dorsal ? `<div class="cart-item-details">Dorsal: ${item.dorsal}</div>` : ''}
                 ${item.parche ? `<div class="cart-item-details">Parche: ${item.parche}</div>` : ''}
-                <div class="cart-item-price">${item.precio.toFixed(2)}€</div>
+                <div class="cart-item-price-breakdown">
+                    <div class="price-base">Precio base: ${precioBase.toFixed(2)}€</div>
+                    ${extras > 0 ? `<div class="price-extras">Extras: +${extras.toFixed(2)}€</div>` : ''}
+                    <div class="price-total"><strong>Total: ${item.precio.toFixed(2)}€</strong></div>
+                </div>
             </div>
             <button class="btn-remove" onclick="removeFromCart(${item.id})">Eliminar</button>
         </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // Eliminar del carrito
@@ -234,17 +374,29 @@ function checkout() {
     const total = cart.reduce((sum, item) => sum + item.precio, 0);
     checkoutTotal.textContent = total.toFixed(2);
     
-    checkoutItems.innerHTML = cart.map((item, index) => `
+    checkoutItems.innerHTML = cart.map((item, index) => {
+        const precioBase = item.precio_base || item.precio;
+        const extras = item.extras || 0;
+        
+        return `
         <div class="checkout-item">
             <div class="checkout-item-name">${index + 1}. ${item.nombre}</div>
+            <div class="checkout-item-details"><strong>ID:</strong> ${item.productId}</div>
             <div class="checkout-item-details">Equipo: ${formatTeamName(item.equipo)}</div>
             <div class="checkout-item-details">Talla: ${item.talla}</div>
             ${item.nombrePersonalizado ? `<div class="checkout-item-details">Nombre: ${item.nombrePersonalizado}</div>` : ''}
             ${item.dorsal ? `<div class="checkout-item-details">Dorsal: ${item.dorsal}</div>` : ''}
             ${item.parche ? `<div class="checkout-item-details">Parche: ${item.parche}</div>` : ''}
-            <div class="checkout-item-price">${item.precio.toFixed(2)}€</div>
+            ${extras > 0 ? `
+                <div class="checkout-item-price-breakdown">
+                    <div>Precio base: ${precioBase.toFixed(2)}€</div>
+                    <div>Extras: +${extras.toFixed(2)}€</div>
+                </div>
+            ` : ''}
+            <div class="checkout-item-price"><strong>Total: ${item.precio.toFixed(2)}€</strong></div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // Cerrar modal de checkout
@@ -272,12 +424,21 @@ async function submitOrder(event) {
     let orderDetails = '';
     cart.forEach((item, index) => {
         orderDetails += `\n${index + 1}. ${item.nombre}`;
+        orderDetails += `\n   ID Producto: ${item.productId}`;
         orderDetails += `\n   Equipo: ${formatTeamName(item.equipo)}`;
         orderDetails += `\n   Talla: ${item.talla}`;
         if (item.nombrePersonalizado) orderDetails += `\n   Nombre: ${item.nombrePersonalizado}`;
         if (item.dorsal) orderDetails += `\n   Dorsal: ${item.dorsal}`;
         if (item.parche) orderDetails += `\n   Parche: ${item.parche}`;
-        orderDetails += `\n   Precio: ${item.precio.toFixed(2)}€\n`;
+        
+        // Mostrar desglose de precio si hay extras
+        const precioBase = item.precio_base || item.precio;
+        const extras = item.extras || 0;
+        if (extras > 0) {
+            orderDetails += `\n   Precio base: ${precioBase.toFixed(2)}€`;
+            orderDetails += `\n   Extras: +${extras.toFixed(2)}€`;
+        }
+        orderDetails += `\n   Precio total: ${item.precio.toFixed(2)}€\n`;
     });
     
     // Preparar datos para enviar al backend
@@ -301,7 +462,7 @@ async function submitOrder(event) {
         submitBtn.textContent = 'Enviando pedido...';
         
         // Enviar pedido al backend Flask
-        const response = await fetch('http://localhost:5000/api/send-order', {
+        const response = await fetch('http://localhost:5001/api/send-order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
