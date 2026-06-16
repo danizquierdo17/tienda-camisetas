@@ -1,11 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)  # Permitir peticiones desde el navegador
 
 # Configuración SMTP de Gmail
@@ -13,6 +14,16 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_EMAIL = "d8t.dev@gmail.com"
 SMTP_PASSWORD = "zhyn ydes zmch regn"
+
+@app.route('/')
+def index():
+    """Servir la página principal"""
+    return send_from_directory('.', 'tienda.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    """Servir archivos estáticos (CSS, JS, imágenes)"""
+    return send_from_directory('.', path)
 
 @app.route('/api/send-order', methods=['POST'])
 def send_order():
@@ -186,11 +197,10 @@ def send_customer_email(name, email, details, total, date):
         server.send_message(msg)
 
 if __name__ == '__main__':
-    import os
     port = int(os.environ.get('FLASK_RUN_PORT', 5001))
     print(f"🚀 Servidor Flask iniciado en http://localhost:{port}")
     print("📧 Configurado para enviar emails desde:", SMTP_EMAIL)
     print("\nPara detener el servidor, presiona Ctrl+C")
-    app.run(debug=True, port=port)
+    app.run(debug=False, host='0.0.0.0', port=port)
 
 # Made with Bob
