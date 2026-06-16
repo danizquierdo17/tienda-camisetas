@@ -4879,7 +4879,7 @@ const productosData = [
   {
     "id": "25561",
     "equipo": "nacional-espana",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/nacional-espana/25561.jpg",
     "nombre": "Espana 1996 Retro 1a Thai Camisetas",
     "precio_lista": 25.0,
     "precio_venta": 36.18
@@ -14063,7 +14063,7 @@ const productosData = [
   {
     "id": "25561",
     "equipo": "nacional-espana",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/nacional-espana/25561.jpg",
     "nombre": "Espana 1996 Retro 1a Thai Camisetas",
     "precio_lista": 25.0,
     "precio_venta": 36.18

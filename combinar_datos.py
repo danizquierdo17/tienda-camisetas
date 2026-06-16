@@ -65,6 +65,8 @@ def iter_image_files(root: Path):
             continue
         if path.name in {"placeholder.svg", "placeholder.jpg"}:
             continue
+        if path.name.endswith("_no_image"):
+            continue
         yield path
 
 
