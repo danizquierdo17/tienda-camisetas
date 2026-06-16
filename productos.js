@@ -7,7 +7,7 @@ const productosData = [
   {
     "id": "29902",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/ninos-camisetas-2627-club-ninos/29902.jpg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29902.jpg",
     "nombre": "Bayern Munchen 26-27 1a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 15.0,
     "precio_venta": 21.71
@@ -15,7 +15,7 @@ const productosData = [
   {
     "id": "29883",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29883.jpg",
     "nombre": "Bayern Munchen 26-27 1a Equipacion Thai Camisetas Manga Larga",
     "precio_lista": 22.0,
     "precio_venta": 31.83
@@ -23,7 +23,7 @@ const productosData = [
   {
     "id": "29882",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29882.jpg",
     "nombre": "Bayern Munchen 26-27 1a Equipacion Thai Mujer Camisetas",
     "precio_lista": 16.5,
     "precio_venta": 23.88
@@ -31,7 +31,7 @@ const productosData = [
   {
     "id": "29881",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29881.jpg",
     "nombre": "Bayern Munchen 26-27 1a Equipacion Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -39,7 +39,7 @@ const productosData = [
   {
     "id": "29876",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29876.jpg",
     "nombre": "Bayern Munchen 26-27 2a Equipacion Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -47,7 +47,7 @@ const productosData = [
   {
     "id": "29452",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29452.jpg",
     "nombre": "Bayern Munchen 25-26 2a Jugador Version Thai Camisetas",
     "precio_lista": 21.0,
     "precio_venta": 30.39
@@ -55,7 +55,7 @@ const productosData = [
   {
     "id": "29156",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/29156.jpg",
     "nombre": "Bayern Munchen 25-26 Rosa Portero Thai Camiseta",
     "precio_lista": 18.0,
     "precio_venta": 26.05
@@ -71,7 +71,7 @@ const productosData = [
   {
     "id": "28769",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/28769.jpg",
     "nombre": "Bayern Munchen 25-26 3a Equipacion Thai Mujer Camiseta",
     "precio_lista": 15.9,
     "precio_venta": 23.01
@@ -79,7 +79,7 @@ const productosData = [
   {
     "id": "28768",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/28768.jpg",
     "nombre": "Bayern Munchen 25-26 3a Equipacion Thai Camisetas",
     "precio_lista": 17.5,
     "precio_venta": 25.32
@@ -95,7 +95,7 @@ const productosData = [
   {
     "id": "28216",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/28216.jpg",
     "nombre": "Bayern Munchen 25-26 Negro Pre Match Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -103,7 +103,7 @@ const productosData = [
   {
     "id": "27865",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/27865.jpg",
     "nombre": "Bayern Munchen 25-26 2a Jugador Version Thai Camisetas",
     "precio_lista": 21.0,
     "precio_venta": 30.39
@@ -111,7 +111,7 @@ const productosData = [
   {
     "id": "27864",
     "equipo": "bundesliga-bayern-munchen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-bayern-munchen/27864.jpg",
     "nombre": "Bayern Munchen 25-26 1a Jugador Version Thai Camisetas",
     "precio_lista": 21.0,
     "precio_venta": 30.39
@@ -127,7 +127,7 @@ const productosData = [
   {
     "id": "29932",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/ninos-camisetas-2627-club-ninos/29932.jpg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29932.jpg",
     "nombre": "Dortmund 26-27 1a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 15.0,
     "precio_venta": 21.71
@@ -135,7 +135,7 @@ const productosData = [
   {
     "id": "29923",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29923.jpg",
     "nombre": "Dortmund 26-27 1a Equpacion Thai Mujer Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -143,7 +143,7 @@ const productosData = [
   {
     "id": "29907",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29907.jpg",
     "nombre": "Dortmund 26-27 1a Equpacion Thai Camisetas Manga Larga",
     "precio_lista": 21.5,
     "precio_venta": 31.11
@@ -151,7 +151,7 @@ const productosData = [
   {
     "id": "29446",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29446.jpg",
     "nombre": "Dortmund 26-27 1a Equpacion Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -159,7 +159,7 @@ const productosData = [
   {
     "id": "29430",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29430.jpg",
     "nombre": "Dortmund 25-26 Especial Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -167,7 +167,7 @@ const productosData = [
   {
     "id": "29157",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/29157.jpg",
     "nombre": "Dortmund 25-26 Copa Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -175,7 +175,7 @@ const productosData = [
   {
     "id": "28663",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/28663.jpg",
     "nombre": "Dortmund 25-26 1a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 15.0,
     "precio_venta": 21.71
@@ -183,7 +183,7 @@ const productosData = [
   {
     "id": "28662",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/28662.jpg",
     "nombre": "Dortmund 25-26 1a Equpacion Thai Mujer Camisetas",
     "precio_lista": 15.9,
     "precio_venta": 23.01
@@ -191,7 +191,7 @@ const productosData = [
   {
     "id": "28268",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/28268.jpg",
     "nombre": "Dortmund 25-26 KidSuper Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -199,7 +199,7 @@ const productosData = [
   {
     "id": "27373",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27373.jpg",
     "nombre": "Dortmund 25-26 Especial Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -207,7 +207,7 @@ const productosData = [
   {
     "id": "27185",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27185.jpg",
     "nombre": "Dortmund 25-26 1a Equpacion Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -215,7 +215,7 @@ const productosData = [
   {
     "id": "27161",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27161.jpg",
     "nombre": "Dortmund 25-26 2a Equipacion Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -223,7 +223,7 @@ const productosData = [
   {
     "id": "27106",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27106.jpg",
     "nombre": "Dortmund 25-26 Portero Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -231,7 +231,7 @@ const productosData = [
   {
     "id": "27089",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27089.jpg",
     "nombre": "Dortmund 25-26 Portero Ninos Camiseta y Shorts",
     "precio_lista": 16.0,
     "precio_venta": 23.15
@@ -239,7 +239,7 @@ const productosData = [
   {
     "id": "27066",
     "equipo": "bundesliga-dortmund",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-dortmund/27066.jpg",
     "nombre": "Dortmund 25-26 Especial Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -247,7 +247,7 @@ const productosData = [
   {
     "id": "29296",
     "equipo": "bundesliga-frankfurt",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-frankfurt/29296.jpg",
     "nombre": "Frankfurt 25-26 3a Equipacion Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -255,7 +255,7 @@ const productosData = [
   {
     "id": "29297",
     "equipo": "bundesliga-frankfurt",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-frankfurt/29297.jpg",
     "nombre": "Frankfurt 25-26 1a Equipacion Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -263,7 +263,7 @@ const productosData = [
   {
     "id": "21873",
     "equipo": "bundesliga-frankfurt",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-frankfurt/21873.jpg",
     "nombre": "Frankfurt 25-26 2a Equipacion Thai Camiseta",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -271,7 +271,7 @@ const productosData = [
   {
     "id": "20394",
     "equipo": "bundesliga-hamburgo",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-hamburgo/20394.jpg",
     "nombre": "Hamburgo 25-26 2a Equipacion Thai Camiseta",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -279,7 +279,7 @@ const productosData = [
   {
     "id": "28394",
     "equipo": "bundesliga-heidenheim",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-heidenheim/28394.jpg",
     "nombre": "Heidenheim 25-26 2a Equipacion Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -287,7 +287,7 @@ const productosData = [
   {
     "id": "28391",
     "equipo": "bundesliga-heidenheim",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-heidenheim/28391.jpg",
     "nombre": "Heidenheim 25-26 1a Equipacion Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -295,7 +295,7 @@ const productosData = [
   {
     "id": "25100",
     "equipo": "bundesliga-leverkusen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-leverkusen/25100.jpg",
     "nombre": "Bayer 04 Leverkusen 25-26 2a Equipacion Thai Camiseta de Futbol",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -303,7 +303,7 @@ const productosData = [
   {
     "id": "18491",
     "equipo": "bundesliga-leverkusen",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-leverkusen/18491.jpg",
     "nombre": "Bayer Leverkusen 25-26 1a Equipacion Thai Camiseta de Futbol",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -311,7 +311,7 @@ const productosData = [
   {
     "id": "27507",
     "equipo": "bundesliga-nurnberg",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-nurnberg/27507.jpg",
     "nombre": "NÃ¼rnberg 25-26 1a Equipacion Thai Mujer Camiseta",
     "precio_lista": 16.5,
     "precio_venta": 23.88
@@ -319,7 +319,7 @@ const productosData = [
   {
     "id": "29985",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/ninos-camisetas-2627-club-ninos/29985.jpg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29985.jpg",
     "nombre": "RB Leipzig 25-26 1a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 16.0,
     "precio_venta": 23.15
@@ -327,7 +327,7 @@ const productosData = [
   {
     "id": "29638",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29638.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -335,7 +335,7 @@ const productosData = [
   {
     "id": "28119",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/28119.png",
     "nombre": "RB Leipzig 25-26 2a Equipacion Thai Camiseta",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -359,7 +359,7 @@ const productosData = [
   {
     "id": "21517",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/21517.jpg",
     "nombre": "RB Leipzig 25-26 Pre Match Thai Camiseta",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -367,7 +367,7 @@ const productosData = [
   {
     "id": "29984",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29984.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta XAVER 24",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -375,7 +375,7 @@ const productosData = [
   {
     "id": "29982",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29982.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta SEIWALD 13",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -383,7 +383,7 @@ const productosData = [
   {
     "id": "29983",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29983.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta YAN DIOMANDE 49",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -399,7 +399,7 @@ const productosData = [
   {
     "id": "29977",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29977.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta NUSA 7",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -407,7 +407,7 @@ const productosData = [
   {
     "id": "29978",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29978.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta RAUM 22",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -415,7 +415,7 @@ const productosData = [
   {
     "id": "29979",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29979.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta ROMULO 40",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -423,7 +423,7 @@ const productosData = [
   {
     "id": "29980",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29980.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta OUEDRAOGO 20",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -431,7 +431,7 @@ const productosData = [
   {
     "id": "29976",
     "equipo": "bundesliga-rb-leipzig",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-rb-leipzig/29976.jpg",
     "nombre": "RB Leipzig 26-27 1a Equipacion Thai Camiseta ORBAN 4",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -439,7 +439,7 @@ const productosData = [
   {
     "id": "29294",
     "equipo": "bundesliga-schalke-04",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-schalke-04/29294.jpg",
     "nombre": "Schalke 04 25-26 3a Equipacion Thai Camiseta de Futbol",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -447,7 +447,7 @@ const productosData = [
   {
     "id": "12473",
     "equipo": "bundesliga-schalke-04",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-schalke-04/12473.jpg",
     "nombre": "Schalke 04 25-26 2a Equipacion Thai Camiseta de Futbol",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -455,7 +455,7 @@ const productosData = [
   {
     "id": "9735",
     "equipo": "bundesliga-schalke-04",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/bundesliga-schalke-04/9735.jpg",
     "nombre": "Schalke 04 25-26 1a Equipacion Thai Camiseta de Futbol",
     "precio_lista": 18.9,
     "precio_venta": 27.35
@@ -1103,7 +1103,7 @@ const productosData = [
   {
     "id": "30363",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30363.jpg",
     "nombre": "Real Madrid 26-27 Chaqueta A26044",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1111,7 +1111,7 @@ const productosData = [
   {
     "id": "30365",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30365.jpg",
     "nombre": "Brasil 26-27 Chaqueta A26043",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1119,7 +1119,7 @@ const productosData = [
   {
     "id": "30366",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30366.jpg",
     "nombre": "Real Madrid 26-27 Chaqueta A26029",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1127,7 +1127,7 @@ const productosData = [
   {
     "id": "30361",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30361.jpg",
     "nombre": "Inter Miami 26-27 Chaqueta A26023",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1135,7 +1135,7 @@ const productosData = [
   {
     "id": "30362",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30362.jpg",
     "nombre": "PSG 26-27 Chaqueta A26033",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1143,7 +1143,7 @@ const productosData = [
   {
     "id": "30360",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30360.jpg",
     "nombre": "Manchester United 26-27 Chaqueta A26045",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1151,7 +1151,7 @@ const productosData = [
   {
     "id": "30359",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30359.jpg",
     "nombre": "Manchester City 26-27 Chaqueta A26042",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1159,7 +1159,7 @@ const productosData = [
   {
     "id": "30358",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30358.jpg",
     "nombre": "Inter Miami 26-27 Chaqueta A26028",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1167,7 +1167,7 @@ const productosData = [
   {
     "id": "30356",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30356.jpg",
     "nombre": "Flamengo 26-27 Chaqueta A26026",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1175,7 +1175,7 @@ const productosData = [
   {
     "id": "30357",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30357.jpg",
     "nombre": "Espana 26-27 Chaqueta A26041",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1183,7 +1183,7 @@ const productosData = [
   {
     "id": "30355",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30355.jpg",
     "nombre": "Flamengo 26-27 Chaqueta A26024",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1191,7 +1191,7 @@ const productosData = [
   {
     "id": "30354",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30354.jpg",
     "nombre": "Colombia 26-27 Chaqueta A26032",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1199,7 +1199,7 @@ const productosData = [
   {
     "id": "30352",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30352.jpg",
     "nombre": "Argentina 25-26 Hoodie Chaqueta F643",
     "precio_lista": 48.0,
     "precio_venta": 69.46
@@ -1207,7 +1207,7 @@ const productosData = [
   {
     "id": "30350",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30350.jpg",
     "nombre": "Brasil International 26-27 Chaqueta A26034",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1215,7 +1215,7 @@ const productosData = [
   {
     "id": "30351",
     "equipo": "chandales-2627-chaqueta",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-2627-chaqueta/30351.jpg",
     "nombre": "Arsenal 26-27 Chaqueta A26022",
     "precio_lista": 30.5,
     "precio_venta": 44.13
@@ -1223,7 +1223,7 @@ const productosData = [
   {
     "id": "29355",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29355.jpg",
     "nombre": "Real Madrid 25-26 Invierno Abrigos G279",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1231,7 +1231,7 @@ const productosData = [
   {
     "id": "29352",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29352.jpg",
     "nombre": "Manchester United 25-26 Invierno Abrigos G287",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1239,7 +1239,7 @@ const productosData = [
   {
     "id": "29353",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29353.jpg",
     "nombre": "Manchester United 25-26 Invierno Abrigos G277",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1247,7 +1247,7 @@ const productosData = [
   {
     "id": "29354",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29354.jpg",
     "nombre": "PSG 25-26 Invierno Abrigos G284",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1255,7 +1255,7 @@ const productosData = [
   {
     "id": "29350",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29350.jpg",
     "nombre": "Inter Milan 25-26 Invierno Abrigos G286",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1263,7 +1263,7 @@ const productosData = [
   {
     "id": "29351",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29351.jpg",
     "nombre": "Hotspur 25-26 Invierno Abrigos G285",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1271,7 +1271,7 @@ const productosData = [
   {
     "id": "29349",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29349.jpg",
     "nombre": "Bar celona 25-26 Invierno Abrigos G288",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1279,7 +1279,7 @@ const productosData = [
   {
     "id": "29348",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29348.jpg",
     "nombre": "Bar celona 25-26 Invierno Abrigos G276",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1287,7 +1287,7 @@ const productosData = [
   {
     "id": "29347",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/29347.jpg",
     "nombre": "Arsenal 25-26 Invierno Abrigos G281",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1295,7 +1295,7 @@ const productosData = [
   {
     "id": "26642",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/26642.jpg",
     "nombre": "2025 Invierno Abrigos G229",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1303,7 +1303,7 @@ const productosData = [
   {
     "id": "26643",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/26643.jpg",
     "nombre": "2025 Invierno Abrigos G230",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -1311,7 +1311,7 @@ const productosData = [
   {
     "id": "26801",
     "equipo": "chandales-abrigos-de-futbol",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/chandales-abrigos-de-futbol/26801.jpg",
     "nombre": "AC Milan 24-25 Invierno Abrigos G258",
     "precio_lista": 62.0,
     "precio_venta": 89.71
@@ -13719,7 +13719,7 @@ const productosData = [
   {
     "id": "28212",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/28212.jpg",
     "nombre": "Real Madrid 25-26 US Pack Camiseta",
     "precio_lista": 25.0,
     "precio_venta": 36.18
@@ -13727,7 +13727,7 @@ const productosData = [
   {
     "id": "27927",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27927.jpg",
     "nombre": "Real Madrid 25-26 2a Equipacion Thai Mujer Camisetas",
     "precio_lista": 15.9,
     "precio_venta": 23.01
@@ -13735,7 +13735,7 @@ const productosData = [
   {
     "id": "27926",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27926.jpg",
     "nombre": "Real Madrid 25-26 2a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 15.0,
     "precio_venta": 21.71
@@ -13743,7 +13743,7 @@ const productosData = [
   {
     "id": "27925",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27925.jpg",
     "nombre": "Real Madrid 25-26 2a Equipacion Thai Camisetas",
     "precio_lista": 17.5,
     "precio_venta": 25.32
@@ -13751,7 +13751,7 @@ const productosData = [
   {
     "id": "27860",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27860.jpg",
     "nombre": "Real Madrid 25-26 3a Equipacion Thai Camisetas",
     "precio_lista": 17.5,
     "precio_venta": 25.32
@@ -13759,7 +13759,7 @@ const productosData = [
   {
     "id": "27856",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27856.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Jugador Version Camisetas",
     "precio_lista": 21.0,
     "precio_venta": 30.39
@@ -13767,7 +13767,7 @@ const productosData = [
   {
     "id": "27687",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27687.jpg",
     "nombre": "Real Madrid 25-26 Doodle Thai Camisetas de Futbol",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13775,7 +13775,7 @@ const productosData = [
   {
     "id": "27683",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27683.jpg",
     "nombre": "Real Madrid 25-26 Pre Match Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13783,7 +13783,7 @@ const productosData = [
   {
     "id": "27660",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27660.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Portero Ninos Camiseta y Shorts",
     "precio_lista": 16.0,
     "precio_venta": 23.15
@@ -13791,7 +13791,7 @@ const productosData = [
   {
     "id": "27658",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27658.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Portero Thai Camisetas",
     "precio_lista": 17.9,
     "precio_venta": 25.9
@@ -13799,7 +13799,7 @@ const productosData = [
   {
     "id": "27657",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27657.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Ninos Camiseta y Shorts",
     "precio_lista": 15.0,
     "precio_venta": 21.71
@@ -13807,7 +13807,7 @@ const productosData = [
   {
     "id": "27654",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27654.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Thai Mujer Camisetas",
     "precio_lista": 15.9,
     "precio_venta": 23.01
@@ -13815,7 +13815,7 @@ const productosData = [
   {
     "id": "27653",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27653.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Thai Camisetas",
     "precio_lista": 17.5,
     "precio_venta": 25.32
@@ -13823,7 +13823,7 @@ const productosData = [
   {
     "id": "27645",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27645.jpg",
     "nombre": "Real Madrid 25-26 3a Equipacion Thai Mujer Camiseta",
     "precio_lista": 15.9,
     "precio_venta": 23.01
@@ -13831,7 +13831,7 @@ const productosData = [
   {
     "id": "27641",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27641.jpg",
     "nombre": "Real Madrid 1986-87 2a Retro Thai Camisetas",
     "precio_lista": 26.0,
     "precio_venta": 37.62
@@ -13839,7 +13839,7 @@ const productosData = [
   {
     "id": "27636",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27636.jpg",
     "nombre": "Real Madrid 25-26 Especial Ninos Camiseta y Shorts Blanco y Azul",
     "precio_lista": 15.5,
     "precio_venta": 22.43
@@ -13847,7 +13847,7 @@ const productosData = [
   {
     "id": "27607",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27607.jpg",
     "nombre": "Real Madrid 25-26 Guerreros Jugador Camisetas",
     "precio_lista": 22.5,
     "precio_venta": 32.56
@@ -13855,7 +13855,7 @@ const productosData = [
   {
     "id": "27499",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27499.jpg",
     "nombre": "Real Madrid 25-26 Blanco y Negro Dragon Ninos Camiseta y Shorts",
     "precio_lista": 16.0,
     "precio_venta": 23.15
@@ -13863,7 +13863,7 @@ const productosData = [
   {
     "id": "27363",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27363.jpg",
     "nombre": "Real Madrid 25-26 Especial Ronaldo 7 Thai Camisetas",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -13871,7 +13871,7 @@ const productosData = [
   {
     "id": "27284",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27284.jpg",
     "nombre": "Real Madrid 25-26 Dragon Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13879,7 +13879,7 @@ const productosData = [
   {
     "id": "27283",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27283.jpg",
     "nombre": "Real Madrid 25-26 Rosa Dragon Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13887,7 +13887,7 @@ const productosData = [
   {
     "id": "27282",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27282.jpg",
     "nombre": "Real Madrid 25-26 Pre MatchThai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13895,7 +13895,7 @@ const productosData = [
   {
     "id": "27202",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27202.jpg",
     "nombre": "Real Madrid 25-26 3a Negro Portero Ninos Camiseta y Shorts",
     "precio_lista": 16.0,
     "precio_venta": 23.15
@@ -13903,7 +13903,7 @@ const productosData = [
   {
     "id": "27119",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27119.jpg",
     "nombre": "Real Madrid 25-26 Rosa Dragon Ninos Camiseta y Shorts",
     "precio_lista": 15.5,
     "precio_venta": 22.43
@@ -13911,7 +13911,7 @@ const productosData = [
   {
     "id": "27093",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27093.jpg",
     "nombre": "Real Madrid 1998-2000 2a Retro Thai Camisetas",
     "precio_lista": 23.5,
     "precio_venta": 34.0
@@ -13919,7 +13919,7 @@ const productosData = [
   {
     "id": "27088",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27088.jpg",
     "nombre": "Ronaldo 25-26 Especial Thai Camisetas-Con Ronaldo",
     "precio_lista": 19.9,
     "precio_venta": 28.8
@@ -13927,7 +13927,7 @@ const productosData = [
   {
     "id": "27080",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27080.jpg",
     "nombre": "Real Madrid 25-26 3a Equipacion Jugador Camisetas",
     "precio_lista": 21.0,
     "precio_venta": 30.39
@@ -13935,7 +13935,7 @@ const productosData = [
   {
     "id": "27062",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27062.jpg",
     "nombre": "Real Madrid 25-26 Negro-Verde Dragona Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13943,7 +13943,7 @@ const productosData = [
   {
     "id": "27061",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27061.jpg",
     "nombre": "Real Madrid 25-26 Dragona Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13951,7 +13951,7 @@ const productosData = [
   {
     "id": "27057",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/27057.jpg",
     "nombre": "Real Madrid 25-26 Especial Ninos Camiseta y Shorts",
     "precio_lista": 15.5,
     "precio_venta": 22.43
@@ -13959,7 +13959,7 @@ const productosData = [
   {
     "id": "25454",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/25454.jpg",
     "nombre": "Real Madrid 25-26 1a Equipacion Portero Jugador Version Camisetas",
     "precio_lista": 21.5,
     "precio_venta": 31.11
@@ -13967,7 +13967,7 @@ const productosData = [
   {
     "id": "26725",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/26725.png",
     "nombre": "Real Madrid 25-26 Marvel Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13975,7 +13975,7 @@ const productosData = [
   {
     "id": "26797",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/26797.jpg",
     "nombre": "Real Madrid 25-26 Pre Match Thai Camiseta",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -13983,7 +13983,7 @@ const productosData = [
   {
     "id": "24709",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/24709.jpg",
     "nombre": "Real Madrid 1998-2000 1a Retro Thai Camisetas",
     "precio_lista": 23.5,
     "precio_venta": 34.0
@@ -13991,7 +13991,7 @@ const productosData = [
   {
     "id": "22301",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/22301.png",
     "nombre": "Real Madrid 25-26 Marvel Thai Camisetas",
     "precio_lista": 18.5,
     "precio_venta": 26.77
@@ -14007,7 +14007,7 @@ const productosData = [
   {
     "id": "30275",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30275.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas TRENT 12",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14015,7 +14015,7 @@ const productosData = [
   {
     "id": "30273",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30273.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas TCHOUAMENI 14",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14023,7 +14023,7 @@ const productosData = [
   {
     "id": "30274",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30274.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas VALVERDE 8",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14031,7 +14031,7 @@ const productosData = [
   {
     "id": "30270",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30270.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas MASTANTUONO 30",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14039,7 +14039,7 @@ const productosData = [
   {
     "id": "30271",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30271.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas GONZALO 16",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14047,7 +14047,7 @@ const productosData = [
   {
     "id": "30272",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30272.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas RODRYGO 11",
     "precio_lista": 20.0,
     "precio_venta": 28.94
@@ -14055,7 +14055,7 @@ const productosData = [
   {
     "id": "30267",
     "equipo": "la-liga-real-madrid",
-    "imagen": "futbolmodaes_img/placeholder.svg",
+    "imagen": "futbolmodaes_img/la-liga-real-madrid/30267.jpg",
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas HUIJSEN 24",
     "precio_lista": 20.0,
     "precio_venta": 28.94
