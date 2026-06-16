@@ -38,7 +38,7 @@ test_*.html
 scraper_*.py
 scraper_*.txt
 limpiar_catalogo.py
-combinar_datos.py
+
 convertir_csv_a_js.py
 reorganizar_imagenes.py
 actualizar_rutas_imagenes.py
