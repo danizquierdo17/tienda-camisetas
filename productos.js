@@ -14059,5 +14059,13 @@ const productosData = [
     "nombre": "Real Madrid 26-27 1a Equipacion Thai Camisetas HUIJSEN 24",
     "precio_lista": 20.0,
     "precio_venta": 28.94
+  },
+  {
+    "id": "25561",
+    "equipo": "nacional-espana",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Espana 1996 Retro 1a Thai Camisetas",
+    "precio_lista": 25.0,
+    "precio_venta": 36.18
   }
 ];

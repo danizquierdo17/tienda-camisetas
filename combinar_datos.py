@@ -5,6 +5,8 @@ import argparse
 import csv
 import json
 import os
+import re
+from pathlib import Path
 from decimal import Decimal, ROUND_HALF_UP
 
 
@@ -13,6 +15,8 @@ DEFAULT_MANIFEST_PATH = "futbolmodaes_img/manifest.csv"
 DEFAULT_OUTPUT_PATH = "productos.js"
 DEFAULT_PLACEHOLDER_PATH = "futbolmodaes_img/placeholder.svg"
 DEFAULT_MULTIPLIER = Decimal("1.447")
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif"}
+PID_PATTERN = re.compile(r"^(\d+)(?:_(\d+))?$")
 
 
 def round_money(value: Decimal) -> Decimal:
@@ -51,6 +55,60 @@ def read_catalog(path: str) -> list[dict]:
                 }
             )
     return rows
+
+
+def iter_image_files(root: Path):
+    for path in sorted(root.rglob("*")):
+        if not path.is_file():
+            continue
+        if path.suffix.lower() not in IMAGE_EXTENSIONS:
+            continue
+        if path.name in {"placeholder.svg", "placeholder.jpg"}:
+            continue
+        yield path
+
+
+def extract_pid(filename_stem: str):
+    match = PID_PATTERN.match(filename_stem)
+    if not match:
+        return None
+    return match.group(1)
+
+
+def rebuild_manifest(root_path: str, output_path: str) -> int:
+    root = Path(root_path)
+    output = Path(output_path)
+
+    if not root.exists() or not root.is_dir():
+        raise FileNotFoundError(f"No existe el directorio raíz de imágenes: {root}")
+
+    rows = []
+
+    for image_path in iter_image_files(root):
+        relative_path = image_path.relative_to(root.parent).as_posix()
+        equipo_slug = image_path.parent.name
+        pid = extract_pid(image_path.stem)
+
+        if not pid:
+            continue
+
+        rows.append([
+            equipo_slug,
+            "",
+            pid,
+            "",
+            relative_path,
+        ])
+
+    rows.sort(key=lambda row: (row[0], int(row[2]), row[4]))
+    output.parent.mkdir(parents=True, exist_ok=True)
+
+    with output.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["equipo_slug", "cpath", "pID", "image_url", "fichero"])
+        writer.writerows(rows)
+
+    return len(rows)
 
 
 def read_manifest(path: str) -> dict[str, str]:
@@ -113,6 +171,8 @@ def main() -> None:
     parser.add_argument("--manifest", default=DEFAULT_MANIFEST_PATH, help="Ruta a manifest.csv")
     parser.add_argument("--output", default=DEFAULT_OUTPUT_PATH, help="Ruta de salida para productos.js")
     parser.add_argument("--placeholder", default=DEFAULT_PLACEHOLDER_PATH, help="Ruta de imagen fallback")
+    parser.add_argument("--images-root", default="futbolmodaes_img", help="Directorio raíz de imágenes para reconstruir manifest")
+    parser.add_argument("--rebuild-manifest", action="store_true", help="Reconstruye manifest.csv antes de generar productos.js")
     parser.add_argument(
         "--multiplier",
         default=str(DEFAULT_MULTIPLIER),
@@ -122,7 +182,11 @@ def main() -> None:
 
     if not os.path.exists(args.catalog):
         raise FileNotFoundError(f"No existe el catálogo: {args.catalog}")
-    if not os.path.exists(args.manifest):
+
+    if args.rebuild_manifest:
+        total_rows = rebuild_manifest(args.images_root, args.manifest)
+        print(f"Manifest reconstruido: {args.manifest} ({total_rows} filas)")
+    elif not os.path.exists(args.manifest):
         raise FileNotFoundError(f"No existe el manifest: {args.manifest}")
 
     multiplicador = Decimal(str(args.multiplier))
