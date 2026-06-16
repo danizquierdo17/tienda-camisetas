@@ -174,7 +174,8 @@ function updateFilterOptions(currentType, currentTeam, searchText) {
         );
     }
     
-    // Actualizar filtro de tipos basado en equipo seleccionado
+    // Para el filtro de tipos, solo aplicar el filtro de equipo.
+    // No limitar por el tipo actual evita que desaparezca la opción seleccionada.
     if (currentTeam) {
         const productsForTeam = availableProducts.filter(p => p.equipo === currentTeam);
         populateTypeFilter(productsForTeam, currentType);
@@ -182,7 +183,8 @@ function updateFilterOptions(currentType, currentTeam, searchText) {
         populateTypeFilter(availableProducts, currentType);
     }
     
-    // Actualizar filtro de equipos basado en tipo seleccionado
+    // Para el filtro de equipos, solo aplicar el filtro de tipo.
+    // No limitar por el equipo actual evita que el selector se quede "encerrado".
     if (currentType) {
         const productsForType = availableProducts.filter(p => p.tipo === currentType);
         populateTeamFilter(productsForType, currentTeam);

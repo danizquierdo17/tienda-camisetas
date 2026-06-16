@@ -39,6 +39,9 @@ Uso:
     python scraper_futbolmodaes.py --only Espana --all-images --delay 1.0
     python scraper_futbolmodaes.py --list                  # solo listar equipos
     python scraper_futbolmodaes.py --catalog-only          # solo catalogo.csv, sin descargar imagenes
+    python scraper_futbolmodaes.py --start-from "ajax"     # comenzar desde AFC Ajax hasta el final
+    python scraper_futbolmodaes.py --start-from "venezia"  # comenzar desde Venezia hasta el final
+    python scraper_futbolmodaes.py --max-products 50       # maximo 50 productos por equipo
 """
 
 import argparse
@@ -103,6 +106,10 @@ RE_TITLE = re.compile(
 )
 RE_TITLE_PLAIN = re.compile(
     r'<title[^>]*>\s*([^<]+?)\s*</title>',
+    re.IGNORECASE,
+)
+RE_META_DESCRIPTION = re.compile(
+    r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)["\']',
     re.IGNORECASE,
 )
 
@@ -231,29 +238,82 @@ def clean_text(s):
     return s.strip()
 
 
+def normalize_product_name(name):
+    """Limpia prefijos SEO y coletillas promocionales del nombre."""
+    txt = clean_text(name)
+
+    txt = re.sub(r'^(cheap|wholesale|discount|thai cheap)\s+', '', txt, flags=re.IGNORECASE)
+    txt = re.sub(
+        r'\s+is an authentic professional sports jersey.*$',
+        '',
+        txt,
+        flags=re.IGNORECASE,
+    )
+    return txt.strip(" -|:")
+
+
+def is_bad_product_name(name):
+    """Detecta nombres SEO/promocionales o claramente incompletos."""
+    if not name:
+        return True
+
+    txt = normalize_product_name(name)
+    lower = txt.lower()
+
+    if len(txt) < 10:
+        return True
+
+    bad_values = {
+        "cheap",
+        "wholesale",
+        "discount",
+    }
+    if lower in bad_values:
+        return True
+
+    return False
+
+
 def extract_name(html):
     """Extrae el nombre del producto del HTML de product_info."""
-    # 1) itemprop="name"
-    m = RE_NAME_ITEMPROP.search(html)
+    candidates = []
+
+    # 1) Meta description: suele empezar por el nombre real del producto
+    m = RE_META_DESCRIPTION.search(html)
     if m:
-        return clean_text(m.group(1))
+        txt = normalize_product_name(m.group(1))
+        if not is_bad_product_name(txt):
+            candidates.append(txt)
 
     # 2) Primer <h1> o <h2> con contenido razonable
     for m in RE_NAME_H1.finditer(html):
-        txt = clean_text(m.group(1))
-        # Descartar headings de navegacion (muy cortos o con HTML dentro)
-        if 10 < len(txt) < 200 and '<' not in txt:
-            return txt
+        txt = normalize_product_name(m.group(1))
+        if 10 < len(txt) < 200 and '<' not in txt and not is_bad_product_name(txt):
+            candidates.append(txt)
 
     # 3) <title> antes del separador
     m = RE_TITLE.search(html)
     if m:
-        return clean_text(m.group(1))
+        txt = normalize_product_name(m.group(1))
+        if not is_bad_product_name(txt):
+            candidates.append(txt)
 
-    # 4) <title> completo como ultimo recurso
+    # 4) itemprop="name" solo como fallback
+    m = RE_NAME_ITEMPROP.search(html)
+    if m:
+        txt = normalize_product_name(m.group(1))
+        if not is_bad_product_name(txt):
+            candidates.append(txt)
+
+    # 5) <title> completo como ultimo recurso
     m = RE_TITLE_PLAIN.search(html)
     if m:
-        return clean_text(m.group(1))
+        txt = normalize_product_name(m.group(1))
+        if not is_bad_product_name(txt):
+            candidates.append(txt)
+
+    if candidates:
+        return max(candidates, key=len)
 
     return ""
 
@@ -437,8 +497,12 @@ def main():
                     help="Carpeta de salida (def: futbolmodaes_img)")
     ap.add_argument("--delay", type=float, default=1.0,
                     help="Pausa base entre peticiones en segundos (def: 1.0)")
+    ap.add_argument("--max-products", type=int, default=None,
+                    help="Maximo de productos a procesar por equipo (def: sin limite)")
     ap.add_argument("--only", nargs="*", default=None,
                     help="Solo equipos cuyo slug contenga alguno de estos textos")
+    ap.add_argument("--start-from", type=str, default=None,
+                    help="Comenzar desde este equipo (slug) y procesar hasta el final")
     ap.add_argument("--list", action="store_true",
                     help="Solo listar los equipos detectados y salir")
     ap.add_argument("--all-images", action="store_true",
@@ -455,6 +519,28 @@ def main():
         categories = [(s, c) for (s, c) in categories
                       if any(f in s.lower() for f in filtros)]
         print(f"Filtrado a {len(categories)} equipos por --only {args.only}\n")
+
+    if args.start_from:
+        # Buscar el índice del equipo desde donde comenzar
+        start_idx = None
+        for idx, (slug, cpath) in enumerate(categories):
+            if args.start_from.lower() in slug.lower():
+                start_idx = idx
+                break
+        
+        if start_idx is not None:
+            total_original = len(categories)
+            categories = categories[start_idx:]
+            print(f"Comenzando desde '{categories[0][0]}' (posición {start_idx + 1}/{total_original})")
+            print(f"Se procesarán {len(categories)} equipos (saltando los primeros {start_idx})\n")
+        else:
+            print(f"⚠️  No se encontró ningún equipo que contenga '{args.start_from}'")
+            print("Equipos disponibles:")
+            for slug, cpath in categories[:10]:
+                print(f"  - {slug}")
+            if len(categories) > 10:
+                print(f"  ... y {len(categories) - 10} más")
+            return
 
     if args.list:
         for slug, cpath in categories:
@@ -513,6 +599,11 @@ def main():
 
             pids = product_ids_for_category(session, slug, cpath, args.delay)
             print(f"   {len(pids)} productos en esta categoria")
+            
+            # Limitar productos si se especificó --max-products
+            if args.max_products and len(pids) > args.max_products:
+                print(f"   ⚠️  Limitando a {args.max_products} productos (de {len(pids)})")
+                pids = pids[:args.max_products]
 
             for pid in pids:
 
