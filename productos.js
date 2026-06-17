@@ -14067,5 +14067,533 @@ const productosData = [
     "nombre": "Espana 1996 Retro 1a Thai Camisetas",
     "precio_lista": 25.0,
     "precio_venta": 36.18
+  },
+  {
+    "id": "29154",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 3a Equipacion Ninos Camiseta y Shorts",
+    "precio_lista": 15.0,
+    "precio_venta": 21.71
+  },
+  {
+    "id": "30199",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 26-27 2a Equipacion Thai Camiseta M.LLORENTE 14",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "30187",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 26-27 2a Equipacion Thai Camiseta J.ALVAREZ 19",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "30188",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 26-27 2a Equipacion Thai Camiseta J.M. GIMENEZ 2",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "30191",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 26-27 2a Equipacion Thai Camiseta HANCKO 17",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "30183",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 26-27 2a Equipacion Thai Camiseta ALEX B. 10",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "27923",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta WITSEL 20",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27919",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta BARRIOS 8",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27920",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta RIQUELME 17",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27921",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta J.M. GIMENEZ 2",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27922",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta SORLOTH 9",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27914",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta S.LINO 12",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27915",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta LENGLET 15",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27916",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta GALLAGHER 4",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27917",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta MOLINA 16",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27918",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta LE NORMAND 24",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27908",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta GIULIANO 22",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27909",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta GRIEZMANN 7",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27910",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta KOKE 6",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27911",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta CORREA 10",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27912",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta R.DE PAUL 5",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27913",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta J.ALVAREZ 19",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27904",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta M.LLORENTE 14",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27905",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta JAVI GALAN 21",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27906",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta REINILDO 23",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27907",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta LEMAR 11",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27903",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 1a Equipacion Thai Camiseta AZPILICUETA 3",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27629",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta LE NORMAND 24",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27630",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta SORLOTH 9",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27631",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta J.M. GIMENEZ 2",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27632",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta LENGLET 15",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27633",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta LEMAR 11",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27623",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta GRIEZMANN 7",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27624",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta REINILDO 23",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27625",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta J.ALVAREZ 19",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27626",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta CORREA 10",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27628",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta MOLINA 16",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27617",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta KOKE 6",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27618",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta BARRIOS 8",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27619",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta S.LINO 12",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27620",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta JAVI GALAN 21",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27621",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta M.LLORENTE 14",
+    "precio_lista": 19.5,
+    "precio_venta": 28.22
+  },
+  {
+    "id": "27622",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta RIQUELME 17",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27614",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta R.DE PAUL 5",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27615",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta GALLAGHER 4",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27616",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta GIULIANO 22",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "27613",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 25-26 2a Equipacion Thai Camiseta AZPILICUETA 3",
+    "precio_lista": 20.0,
+    "precio_venta": 28.94
+  },
+  {
+    "id": "26477",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 1a Equipacion Thai Camiseta LE NORMAND 24",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26483",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 1a Equipacion Thai Camiseta REINILDO 23",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26484",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 1a Equipacion Thai Camiseta JAVI GALAN 21",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26485",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 1a Equipacion Thai Camiseta GIULIANO 22",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26491",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 1a Equipacion Thai Camiseta WITSEL 20",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26493",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta AZPILICUETA 3",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26495",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta GRIEZMANN 7",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26496",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta LE NORMAND 24",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26497",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta LEMAR 11",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26498",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta GIULIANO 22",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26499",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta KOKE 6",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26500",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta GALLAGHER 4",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26501",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta BARRIOS 8",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26502",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta JAVI GALAN 21",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26503",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta J.ALVAREZ 19",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26504",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta LENGLET 15",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26505",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta J.M. GIMENEZ 2",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26506",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta CORREA 10",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
+  },
+  {
+    "id": "26507",
+    "equipo": "la-liga-atletico-madrid",
+    "imagen": "futbolmodaes_img/placeholder.svg",
+    "nombre": "Atletico Madrid 24-25 2a Equipacion Thai Camiseta REINILDO 23",
+    "precio_lista": 20.5,
+    "precio_venta": 29.66
   }
 ];

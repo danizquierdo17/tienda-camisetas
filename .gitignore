@@ -65,6 +65,12 @@ backups/
 images/
 España/
 Tienda/
-futbolmodaes_img/
+
+# Ignorar imágenes descargadas, pero permitir catálogo y manifest
+futbolmodaes_img/**
+!futbolmodaes_img/catalogo.csv
+!futbolmodaes_img/manifest.csv
+!futbolmodaes_img/placeholder.svg
+!futbolmodaes_img/placeholder.jpg
 
 # Made with Bob
