@@ -78,7 +78,7 @@ RE_PRODUCT = re.compile(r'-p-(\d+)\.html', re.IGNORECASE)
 
 # Imagen principal: bmz_cache/ o images/
 RE_BIG_IMAGE = re.compile(
-    r'((?:https?://www\.futbolmodaes\.com)?/?(?:bmz_cache|images)/[^\s"\'<>)]+?\.(?:jpe?g|png|gif))',
+    r'((?:https?://www\.futbolmodaes\.com)?/?(?:bmz_cache|images)/[^"\'<>)]+?\.(?:jpe?g|png|gif))',
     re.IGNORECASE,
 )
 RE_ADDITIONAL = re.compile(
