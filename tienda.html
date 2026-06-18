@@ -11,8 +11,13 @@
     <header>
         <div class="container">
             <h1>⚽ Tienda de Camisetas</h1>
-            <div class="cart-icon" onclick="toggleCart()">
-                🛒 Carrito (<span id="cart-count">0</span>)
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <form method="post" action="/logout" style="margin: 0;">
+                    <button type="submit" class="logout-button">Salir</button>
+                </form>
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 Carrito (<span id="cart-count">0</span>)
+                </div>
             </div>
         </div>
     </header>

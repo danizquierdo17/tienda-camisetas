@@ -1,12 +1,14 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template, redirect, url_for, session
 from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
+from functools import wraps
 import os
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='.', static_url_path='', template_folder='.')
+app.secret_key = os.environ.get('FLASK_SECRET_KEY')
 CORS(app)  # Permitir peticiones desde el navegador
 
 # Configuración SMTP de Gmail
@@ -15,14 +17,59 @@ SMTP_PORT = 587
 SMTP_EMAIL = "d8t.dev@gmail.com"
 SMTP_PASSWORD = "zhyn ydes zmch regn"
 
+ACCESS_PASSWORD = os.environ.get('ACCESS_PASSWORD')
+
+PROTECTED_STATIC_FILES = {
+    'tienda.html',
+    'tienda.js',
+    'tienda.css',
+    'productos.js',
+}
+
+def is_authenticated():
+    return session.get('authenticated', False)
+
+def login_required(view_func):
+    @wraps(view_func)
+    def wrapped_view(*args, **kwargs):
+        if not is_authenticated():
+            return redirect(url_for('index'))
+        return view_func(*args, **kwargs)
+    return wrapped_view
+
 @app.route('/')
 def index():
-    """Servir la página principal"""
+    """Servir la portada privada sin referencias al catálogo"""
+    if is_authenticated():
+        return redirect(url_for('shop'))
+    return render_template('access.html', error=None)
+
+@app.route('/login', methods=['POST'])
+def login():
+    """Validar contraseña de acceso"""
+    password = request.form.get('password', '')
+    if password == ACCESS_PASSWORD:
+        session['authenticated'] = True
+        return redirect(url_for('shop'))
+    return render_template('access.html', error='Clave incorrecta')
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    """Cerrar sesión de acceso"""
+    session.clear()
+    return redirect(url_for('index'))
+
+@app.route('/tienda')
+@login_required
+def shop():
+    """Servir la tienda protegida"""
     return send_from_directory('.', 'tienda.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
     """Servir archivos estáticos (CSS, JS, imágenes)"""
+    if path in PROTECTED_STATIC_FILES and not is_authenticated():
+        return redirect(url_for('index'))
     return send_from_directory('.', path)
 
 @app.route('/api/send-order', methods=['POST'])
